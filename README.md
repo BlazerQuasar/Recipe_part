@@ -1,70 +1,76 @@
 # Todo List API
 
-基于Node.js、Express和MongoDB的Todo List后端API服务。
+A backend API service for a Todo List built with Node.js, Express, and MongoDB.
 
-## 功能特点
+## Features
 
-- RESTful API设计
-- MongoDB数据存储
-- 异步/等待语法
-- 错误处理
-- 日志记录
+- RESTful API design
+- MongoDB data storage
+- Asynchronous/await syntax
+- Error handling
+- Logging
 
-## API端点
+## API Endpoints
 
-| 路由 | 方法 | 描述 |
-|------|------|------|
-| `/api/get-todo` | GET | 获取所有Todo项 |
-| `/api/add-todo` | POST | 添加新的Todo项 |
-| `/api/update-todo/:id` | POST | 更新指定Todo项的状态 |
-| `/api/del-todo/:id` | POST | 删除指定的Todo项 |
+| Route | Method | Description |
+|-------|--------|-------------|
+| `/api/get-todo` | GET | Retrieve all Todo items |
+| `/api/add-todo` | POST | Add a new Todo item |
+| `/api/update-todo/:id` | POST | Update the status of a specified Todo item |
+| `/api/del-todo/:id` | POST | Delete a specified Todo item |
 
-## 安装与运行
+## Installation and Running
 
-1. 克隆项目
-2. 安装依赖:
+1. Clone the project.
+2. Install dependencies:
+
    ```
    npm install
    ```
-3. 配置环境变量:
-   - 创建`.env`文件并设置:
-     ```
-     PORT=3000
-     MONGO_URI=你的MongoDB连接字符串
-     NODE_ENV=development
-     ```
-4. 启动服务器:
+3. Configure environment variables:
+- Create a `.env` file and set:
+  ```
+  PORT=3000
+  MONGO_URI=your MongoDB connection string
+  NODE_ENV=development
+  ```
+4. Start the server:
+
    ```
    npm start
    ```
 
-## 使用示例
+## Usage Examples
 
-### 获取所有Todo项
+### Retrieve All Todo Items
+
 
 ```
 GET /api/get-todo
 ```
 
-### 添加新Todo项
+
+### Add a New Todo Item
+
+
 
 ```
 POST /api/add-todo
 Content-Type: application/json
 
 {
-  "value": "完成项目文档",
+  "value": "Complete project documentation",
   "isCompleted": false
 }
 ```
 
-### 更新Todo项状态
+### Update Todo Item Status
 
 ```
 POST /api/update-todo/[todo_id]
 ```
 
-### 删除Todo项
+### Delete a Todo Item
 
 ```
 POST /api/del-todo/[todo_id]
